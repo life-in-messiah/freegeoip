@@ -9,9 +9,8 @@ class Struct:
 def fetch(server="https://freegeoip.net/", ip=None):
 
     # construct the request URL
-    query_prefix = ("/" if not server.endswith("/") else "") + \
-        "json/" + \
-        ("?q=" if ip else "")
+    query_prefix = ("/" if not server.endswith("/") else "") + "json/"
+
 
     request_url = server + query_prefix + ip
 
